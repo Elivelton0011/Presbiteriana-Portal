@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presbiteriana - vila feliz</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <script src="https://kit.fontawesome.com/6e9c8775be.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,10 +28,11 @@
         <nav>
             <ul>
                 <li><a href="#hero">HOME</a></li>
+                <li><a href="#horario">HORARIOS</a></li>
                 <li><a href="#sobre">SOBRE</a></li>
                 <li><a href="#equipe">EQUIPE</a></li>
-                <li><a href="#">link04</a></li>
-                <li><a href="#">link05</a></li>
+                <li><a href="#redes">REDES</a></li>
+                  <li><a href="#contatos">CONTATOS</a></li>
             </ul>
         </nav>
     </header>
@@ -176,7 +178,61 @@
 
     <hr>
 
+    <section id="redes" class="hidden">
+        <h1>CONECTE-SE CONOSCO</h1>
+        <div id="youtube">
+           <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/FF5UrV_zjxY?si=rgzl-j8MlmGEdVOX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+           <div id="texto-youtube">
+               <h2>titulo</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maxime deleniti, eius ipsam provident omnis quia accusantium quaerat nostrum excepturi saepe, sit accusamus iste? A illum iste adipisci provident saepe?</p>
+                <a href="https://www.youtube.com/@ipbvilafelizvila" target="_blank">
+                    <p id="botao-saiba-mais">Acessar Canal</p>
+                </a>
+           </div>
+        </div>
+
+        <div id="redes-sociais" class="hidden">
+           <h1>REDES SOCIAIS</h1>
+            
+           <div id="redes-sociais-icons">
+             <hr id="hr-redes-sociais">
+               <i class="fa-brands fa-instagram"></i>
+               <i class="fa-brands fa-whatsapp"></i>
+               <i class="fa-brands fa-facebook"></i>
+               <i class="fa-brands fa-youtube"></i> <hr id="hr-redes-sociais">
+           </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contatos" class="hidden">
+        <h1>CONTATOS</h1>
+        <div id="container-contatos">
+            <div>
+                <img src="img/contatos/igreja.jpg" class="objeto-contato">
+                <h2>Endereço</h2>
+                <p>Rua: 01, Vila Feliz, São Paulo - SP</p>
+            </div>
+
+            <div id="maps">
+                <iframe id="google-maps" class="objeto-contato" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.8087285001775!2d-34.8492262009211!3d-7.031754574267731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdf5e621a21cd%3A0xe6d7a6ac53723bfa!2sIgreja%20Presb%C3%ADteriana%20em%20Vila%20Feliz!5e0!3m2!1spt-BR!2sbr!4v1784057093548!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <p>Telefone: (11) 99999-9999</p>
+                <p>Email: igreja@presbiteriana.com</p>
+                <p>WhatsApp: (11) 99999-9999</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="hidden">
+        <img src="img/logo_solo.png">
+        <p>2026 &#169; Igreja Presbiteriana em Vila Feliz - Todos os direitos reservados. <br>
+            Desenvolvido por <a href="https://www.linkedin.com/in/eliveltonchaves/" target="_blank">Elivelton Chaves</a></p>
+    </footer>
+
     <script src="scripts/hero.js"></script>
 </body>
-    <script src="scripts/scroll.js"></script>
+<script src="scripts/scroll.js"></script>
+
 </html>
