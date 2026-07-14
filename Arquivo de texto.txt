@@ -8,7 +8,7 @@ figma: https://www.figma.com/proto/rRoYbmHcXdfo5WIehcMAls/presbiteriana---vila-f
 
 cores:
 
-padrao: #5fc6c4
+DESTAQUE: #5fc6c4
 escura: #2c2c33
 
 

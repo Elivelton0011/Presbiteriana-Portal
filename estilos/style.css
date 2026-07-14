@@ -8,7 +8,8 @@
 
 :root {
     --destaque: #54b7b5;
-    --contradestaque: #4A4A4AD9;
+    --footer: #4A4A4AD9;
+    --contradestaque: #103c3c;
 }
 
 body {
@@ -79,16 +80,23 @@ nav>ul>li>a:hover{
 }
 
 /* hero */
-div.item{
-    display: none;
-    background-color: #b85fc6;
-    width: 100vw;
-    height: 850px;
+section#hero{
+    position: relative;
+    
+    width: 100%;
+     height: clamp(620px, 80vh, 850px);
 
+    margin-top: -128px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    overflow: hidden;
+
+}
+div.item{
     position: absolute;
-    top: 30px;
-    left: 0;
-    z-index: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
 }
 
 div.item.active{
@@ -107,8 +115,8 @@ div.item.active{
      position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    height: 50px;
-    width: 50px;
+    height: 47px;
+    width: 47px;
     border-radius: 50px;
     background-color: transparent;
     border: 3px solid rgb(250, 250, 250);
@@ -124,4 +132,213 @@ div.item.active{
 
 #next{
     right: 30px;
+}
+
+/* Horario de culto */
+
+h1{
+    font-size: 2.5rem;
+    color: var(--contradestaque);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+   Font-weight: 800;
+    
+}
+
+section#horario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+    position: relative;
+    z-index: 0;
+}
+
+div#container-horario{
+    display: flex;
+    gap: 30px;
+}
+
+img.horario-img{
+    height: 40vh;
+    min-height: 400px;
+    max-height: 450px;
+    border-radius: 15px;
+}
+
+/* Sobre a igreja */
+
+hr{
+    border: none;
+    height: 8px;
+    background-color: var(--destaque);
+    margin: 100px 0;
+}
+
+section#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+div#conteudo-sobre{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+img#conteudo-sobre{
+    height: 40vh;
+    min-height: 400px;
+    max-height: 450px;
+    width: 40vh;
+    min-width: 400px;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+    Object-fit: cover;
+    border-radius: 15px;
+    
+}
+
+div#texto-sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#botao-saiba-mais{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background-color: var(--destaque);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#botao-saiba-mais:hover{
+    background-color: var(--contradestaque);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Equipe */
+
+section#equipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+div#container-pastor{   
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+div.pastor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 30px;
+    max-width: 1200px;
+}
+
+div.pastor img{
+    height: 40vh;
+    min-height: 400px;
+    max-height: 450px;
+    width: 40vh;
+    min-width: 400px;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+    Object-fit: cover;
+    border-radius: 50px;
+
+    position: relative;
+    z-index: 1;
+}
+
+div#texto-pastor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.873);
+    backdrop-filter: blur(2px);           /* Desfoque do fundo */
+    -webkit-backdrop-filter: blur(10px);   /* Safari */
+    width: 120%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.155);
+
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+}
+
+div#texto-pastor h2{
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    Font-weight: 700;
+    
+}
+
+div#texto-pastor h3{
+    font-size: 1.2rem;
+    color: gray;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    Font-weight: 300;
+}
+
+#botao-ler-mais{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background-color: var(--destaque);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#botao-ler-mais:hover{
+    background-color: var(--contradestaque);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+div#lideranca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+div#container-lideranca{
+    display: flex;
+    gap: 100px;
+    padding: 30px;
+}
+
+#area-lideranca{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+#area-lideranca ul{
+    list-style: none;
+    columns: 2;
+   
 }
