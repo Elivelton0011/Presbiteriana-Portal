@@ -1,0 +1,16 @@
+referencias:
+
+pine street - presbyterian chrch: https://pinestreet.org/about/
+Igreja presbireriano do Brasil: https://www.ipb.org.br/
+igreja presbiteriana de pinheiros: https://www.ippinheiros.org.br/
+
+figma: https://www.figma.com/proto/rRoYbmHcXdfo5WIehcMAls/presbiteriana---vila-feliz?node-id=0-1&t=XTpRkM75UoI11HWY-1
+
+cores:
+
+padrao: #5fc6c4
+escura: #2c2c33
+
+
+
+
