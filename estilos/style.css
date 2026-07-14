@@ -189,7 +189,7 @@ div#conteudo-sobre{
     max-width: 1200px;
 }
 
-img#conteudo-sobre{
+img#img-conteudo-sobre{
     height: 40vh;
     min-height: 400px;
     max-height: 450px;
@@ -329,7 +329,7 @@ div#container-lideranca{
     padding: 30px;
 }
 
-#area-lideranca{
+.area-lideranca{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -337,7 +337,7 @@ div#container-lideranca{
     
 }
 
-#area-lideranca ul{
+.area-lideranca ul{
     list-style: none;
     columns: 2;
    
