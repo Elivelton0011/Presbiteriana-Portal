@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presbiteriana - vila feliz</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
+
 <body>
-  
-         <img id="shape"  src="img/shape.png" alt="">
-         <div id="contatos-nav">
-                <a href="#"><p>Localizacao |</p></a>
-                <a href="#"><p>email |</p></a>
-                <a href="#"><p>Contato </p></a>
-            </div>
-             <header>
-            <img id="logo" src="img/logo.png" alt="Igreja Presbiteriana">
-            <nav>
-                <ul>
-                    <li><a href="#hero">HOME</a></li>
-                    <li><a href="#sobre">SOBRE</a></li>
-                    <li><a href="#equipe">EQUIPE</a></li>
-                    <li><a href="#">link04</a></li>
-                     <li><a href="#">link05</a></li>
-                </ul>
-            </nav>
-             </header>
-            
-         
-           
-        <section id="hero">
-         <!-- itens do hero -->
-          <div class="item active">
-               <img src="img/hero/jovens.png" alt="imagem">
-            </div>
-            <div class="item">
-               <img src="img/hero/igreja.jpeg" alt="imagem">
-            </div>
-            <div class="item">
-               <img src="img/hero/kids.png" alt="">
-            </div>
-          <div class="arrow">
-                    <button id="prev"> < </button>
+
+    <img id="shape" src="img/shape.png" alt="">
+    <div id="contatos-nav">
+        <a href="#">
+            <p>Localizacao |</p>
+        </a>
+        <a href="#">
+            <p>email |</p>
+        </a>
+        <a href="#">
+            <p>Contato </p>
+        </a>
+    </div>
+    <header>
+        <img id="logo" src="img/logo.png" alt="Igreja Presbiteriana">
+        <nav>
+            <ul>
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#equipe">EQUIPE</a></li>
+                <li><a href="#">link04</a></li>
+                <li><a href="#">link05</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section id="hero">
+        <!-- itens do hero -->
+        <div class="item active">
+            <img src="img/hero/jovens.png" alt="imagem">
+        </div>
+        <div class="item">
+            <img src="img/hero/igreja.jpeg" alt="imagem">
+        </div>
+        <div class="item">
+            <img src="img/hero/kids.png" alt="">
+        </div>
+        <div class="arrow">
+            <button id="prev">
+                < </button>
                     <button id="next"> > </button>
-                </div>
-     </section>
+        </div>
+    </section>
 
     <!--horarios do culto-->
-    <section id="horario">
+    <section id="horario" class="hidden">
         <h1>HORARIOS DE CULTO</h1>
 
         <div id="container-horario">
-            <img class="horario-img" src="img/horario/culto noite.png">
-            <img class="horario-img" src="img/horario/culto noite.png">
-            <img class="horario-img" src="img/horario/culto noite.png">
-            
+            <div class="hidden"><img class="horario-img" src="img/horario/culto noite.png"></div>
+            <div class="hidden"><img class="horario-img" src="img/horario/culto noite.png"></div>
+            <div class="hidden"><img class="horario-img" src="img/horario/culto noite.png"></div>
+
         </div>
     </section>
 
     <hr>
-    
-    <section id="sobre">
+
+    <section id="sobre" class="hidden">
 
         <h1>SOBRE A IGREJA</h1>
 
@@ -69,15 +78,23 @@
             <div id="texto-sobre">
                 <h2>titulo</h2>
                 <h3>subtitulo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, repudiandae omnis esse nihil provident vitae quae nobis ducimus ipsum, ut natus minima culpa pariatur aut deleniti reprehenderit aliquid. Aut.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ipsum, libero quis iusto cumque ipsam culpa earum, iure, aliquid tempora deleniti distinctio! Consequuntur ut quidem vero natus soluta nam suscipit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident tempore dicta dolorem. Ad rerum illo totam. Quaerat rem nostrum voluptatibus cumque quam aliquid animi ratione praesentium, illum, molestiae quia laborum.</p>
-                <a href="#" ><p id="botao-saiba-mais">Saiba mais sobre nossa igreja</p></a>
-        </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem, repudiandae omnis esse nihil
+                    provident vitae quae nobis ducimus ipsum, ut natus minima culpa pariatur aut deleniti reprehenderit
+                    aliquid. Aut.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ipsum, libero quis iusto cumque ipsam
+                    culpa earum, iure, aliquid tempora deleniti distinctio! Consequuntur ut quidem vero natus soluta nam
+                    suscipit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident tempore dicta dolorem.
+                    Ad rerum illo totam. Quaerat rem nostrum voluptatibus cumque quam aliquid animi ratione praesentium,
+                    illum, molestiae quia laborum.</p>
+                <a href="#">
+                    <p id="botao-saiba-mais">Saiba mais sobre nossa igreja</p>
+                </a>
+            </div>
     </section>
 
     <hr>
 
-    <section id="equipe">
+    <section id="equipe" class="hidden">
         <h1>CONHEÇA NOSSA LIDERANÇA</h1>
         <div id="container-pastor">
             <div class="pastor">
@@ -94,7 +111,7 @@
 
         <div id="lideranca">
             <h1>NOSSA EQUIPE</h1>
-            <div id="container-lideranca">
+            <div id="container-lideranca" class="hidden">
                 <div class="area-lideranca">
                     <h2>Diaconia</h2>
                     <ul>
@@ -113,7 +130,7 @@
                     </ul>
                 </div>
 
-                 <div class="area-lideranca">
+                <div class="area-lideranca">
                     <h2>Ecos</h2>
                     <ul>
                         <li>Fulano de tal(lider jovem)</li>
@@ -131,7 +148,7 @@
                     </ul>
                 </div>
 
-                 <div class="area-lideranca">
+                <div class="area-lideranca">
                     <h2>Louvor</h2>
                     <ul>
                         <li>Fulano de tal(Maestro)</li>
@@ -142,7 +159,7 @@
                         <li>Cicrano de tal(Guitarrista)</li>
                         <li>Beltrano de tal(Baterista)</li>
                         <li>Fulano de tal(Cantor)</li>
-                         <li>Fulano de tal(Maestro)</li>
+                        <li>Fulano de tal(Maestro)</li>
                         <li>Cicrano de tal(Guitarrista)</li>
                         <li>Beltrano de tal(Baterista)</li>
                         <li>Fulano de tal(Cantor)</li>
@@ -154,14 +171,12 @@
                 </div>
 
             </div>
-        </div>  
+        </div>
     </section>
 
     <hr>
 
-    <section></section>
-
-      <script src="scripts/hero.js"></script>
+    <script src="scripts/hero.js"></script>
 </body>
-
+    <script src="scripts/scroll.js"></script>
 </html>

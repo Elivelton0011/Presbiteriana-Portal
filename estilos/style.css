@@ -342,3 +342,39 @@ div#container-lideranca{
     columns: 2;
    
 }
+
+/* animacao de scroll */
+.hidden{
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 1s ease-out, filter 0.6s ease-out;
+  
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity 1s ease-out, filter 0.6s ease-out; 
+}
+
+section#horario.hidden img{
+    transform: translatex(-100%);
+}
+section#horario.show img{
+    transform: translatex(0%);
+    transition: transform 1s ease-out;
+}
+
+#container-horario :nth-child(1).hidden{
+    transition-delay: 200ms;
+    
+}
+
+#container-horario :nth-child(2).show{
+    transition-delay: 300ms;
+}
+
+#container-horario :nth-child(3).hidden{
+    transition-delay: 400ms;
+}
+
