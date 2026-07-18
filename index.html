@@ -13,13 +13,19 @@
 
 <body>
     <header id="header">
-        <div class="container">
+          <button class="hamburger" aria-label="Abrir menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+        <div class="">
             <img id="shape" src="img/shape.png" alt="">
  
             <div class="flex">
                 <img id="logo" src="img/logo.png" alt="Igreja Presbiteriana">
                 <img id="logo-scroll" src="img/logo_solo.png">
-                <nav>
+                
+                <nav class="nav">
                     <ul>
                         <li><a href="#hero">HOME</a></li>
                         <li><a href="#horario">HORARIOS</a></li>
@@ -72,7 +78,7 @@
         <h1>SOBRE A IGREJA</h1>
 
         <div id="conteudo-sobre">
-            <img id="img-conteudo-sobre" src="img/sobre/images.jpeg" alt="">
+            <img id="img-conteudo-sobre" src="img/sobre/imagem.jpeg" alt="">
             <div id="texto-sobre">
                 <h2>titulo</h2>
                 <h3>subtitulo</h3>
@@ -207,7 +213,7 @@
         <h1>CONTATOS</h1>
         <div id="container-contatos">
             <div class="contato-item">
-                <img src="img/contatos/fachada.png" class="objeto-contato">
+                <img src="img/contatos/fachada.jpeg" class="objeto-contato">
                 <h2>Endereço</h2>
                 <p>Vila Feliz - R. Mangue Branco - Jacaré, Cabedelo - PB, 58106-134</p>
             </div>
@@ -229,6 +235,7 @@
 
     <script src="scripts/hero.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/hamburger.js"></script>
 </body>
 <script src="scripts/scroll.js"></script>
 

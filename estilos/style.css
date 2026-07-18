@@ -96,6 +96,45 @@ header.rolagem img#shape{
 
 }
 
+/* Menu - Hamburguer */
+/* Menu - Hamburguer */
+.hamburger{
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+    width: 36px;
+    height: 30px;
+    padding: 0;
+}
+
+.hamburger .bar{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--contradestaque);
+    margin: 6px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger.active .bar{
+    background: white;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+}
+
 /* hero */
 section#hero{
     position: relative;

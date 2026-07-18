@@ -2,9 +2,53 @@
 
 @media (max-width: 900px), (orientation: landscape) and (max-width: 900px){
 
+    .hamburger{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
     header{
+        display: block;
+    }
+
+    header img{
         display: none;
     }
+
+    header nav > ul{
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var( --contradestaque);
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    padding-right: 0;
+        
+    }
+
+    
+ 
+
+     nav.active ul {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        
+     }
+
+    
+
+
 
     div#container-horario{
     display: flex;

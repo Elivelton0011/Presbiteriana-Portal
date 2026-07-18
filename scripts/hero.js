@@ -7,7 +7,7 @@ let active = 0
 
 
 function nextSlide() {
-    let activeOld = document.querySelector('.active')
+    let activeOld = document.querySelector('.item.active')
     activeOld.classList.remove('active')
 
     active = active >= count - 1 ? 0 : active + 1
@@ -17,7 +17,7 @@ function nextSlide() {
 
 
 function prevSlide() {
-    let activeOld = document.querySelector('.active')
+    let activeOld = document.querySelector('.item.active')
     activeOld.classList.remove('active')
 
     active = active <= 0 ? count - 1 : active - 1
@@ -36,7 +36,7 @@ prev.onclick = () => {
 }
 
 
-// troca automaticamente a cada 5 segundos
+// troca automaticamente a cada 2 segundos
 setInterval(() => {
     nextSlide()
-}, 2000)
+}, 10000)
