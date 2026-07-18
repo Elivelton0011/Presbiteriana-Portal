@@ -74,6 +74,10 @@ div#youtube{
     width: 100%;
 }
 
+hr.hr-redes-sociais{
+    display: none;
+}
+
 div#container-contatos{
         display: flex;
         flex-direction: column;
