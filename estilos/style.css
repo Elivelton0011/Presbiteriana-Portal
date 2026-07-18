@@ -154,7 +154,7 @@ h1{
     font-size: 2.5rem;
     color: var(--contradestaque);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-   Font-weight: 800;
+     Font-weight: 800;
     
 }
 
@@ -174,10 +174,10 @@ div#container-horario{
 }
 
 img.horario-img{
-    height: 40vh;
-    min-height: 400px;
-    max-height: 450px;
+    height: clamp(300px, 40vh, 450px);
+    width: auto;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 /* Sobre a igreja */
@@ -201,18 +201,16 @@ div#conteudo-sobre{
     gap: 30px;
     padding: 30px;
     max-width: 1200px;
+     width: 100%;
+     align-items: center;
 }
 
 img#img-conteudo-sobre{
-    height: 40vh;
-    min-height: 400px;
-    max-height: 450px;
-    width: 40vh;
-    min-width: 400px;
-    max-width: 450px;
-    aspect-ratio: 1/1;
-    Object-fit: cover;
+     width: clamp(280px, 35vw, 450px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 15px;
+    flex-shrink: 0;
     
 }
 
@@ -366,24 +364,21 @@ section#redes{
     padding: 30px;
 }
 div#youtube{
-    display: flex;
+      display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     padding: 30px;
-    margin-bottom: 80px;
+    max-width: 1300px;
+    width: 100%;
 }
 
 iframe#youtube-video{
-    height: 40vh;
-    min-height: 400px;
-    max-height: 500px;
-    width: 70vw;
-    min-width: 600px;
-    max-width: 800px;
-    margin-left: 12vw;
-    aspect-ratio: 1/1;
-    Object-fit: cover;  
+  width: clamp(300px, 55vw, 800px);
+    aspect-ratio: 16 / 9;
+    height: auto;
+
     border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
 }
 
 div#redes-sociais{
@@ -393,6 +388,13 @@ div#redes-sociais{
     gap: 30px;
     padding: 10px;
     width: 100%;
+}
+
+#texto-youtube{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
 }
 
 div#redes-sociais-icons{
@@ -407,7 +409,7 @@ div#redes-sociais-icons > a{
     color: var(--destaque);
 }
 
-hr#hr-redes-sociais{
+hr.hr-redes-sociais{
     border: none;
     height: 4px;
     background-color: var(--destaque);
@@ -415,8 +417,10 @@ hr#hr-redes-sociais{
     margin-top: 20px;
 }
 
+/* contatos */
+
 section#contatos{
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -424,24 +428,24 @@ section#contatos{
 }
 
 div#container-contatos{
-    display: flex;
-    gap: 30px;
+        display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
     padding: 30px;
-    margin-bottom: 80px;
+    width: 100%;
+    max-width: 1300px;
 }
 
 .objeto-contato{
-height: 60vh;
-    min-height: 100px;
-    max-height: 500px;
-width: 60vh;
-    min-width: 100px;
-    max-width: 500px;
-    aspect-ratio: 1/1;
-    Object-fit: cover;  
+ width: clamp(300px, 40vw, 500px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+
+    object-fit: cover;
     border-radius: 15px;
-   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.206);
-   margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    margin-bottom: 15px;
 }
 
 /* footer */
