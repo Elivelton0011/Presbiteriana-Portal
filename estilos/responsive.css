@@ -1,6 +1,6 @@
 /* celulares */
 
-@media (max-width: 767px){
+@media (max-width: 900px), (orientation: landscape) and (max-width: 900px){
 
     header{
         display: none;
