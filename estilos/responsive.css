@@ -78,6 +78,16 @@ hr.hr-redes-sociais{
     display: none;
 }
 
+div#redes-sociais-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 3rem;
+    color: var(--destaque);
+    width: 100%;
+    margin-bottom: -90px;
+}
+
 div#container-contatos{
         display: flex;
         flex-direction: column;
