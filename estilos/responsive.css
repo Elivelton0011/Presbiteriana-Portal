@@ -19,13 +19,13 @@
     }
 
     header nav > ul{
-      position: fixed;
+       position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: var( --contradestaque);
-    clip-path: circle(100px at 90% -15%);
+    clip-path: circle(100px at 90% -100px);
     transition: 1s ease-out;
 
     flex-direction: column;
@@ -36,6 +36,18 @@
     padding-right: 0;
         
     }
+
+    nav>ul>li>a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+    color: white;
+    padding: 24px 60px;
+
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
     
  
