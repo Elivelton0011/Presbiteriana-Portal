@@ -253,8 +253,11 @@ section#equipe{
 
 div#container-pastor{   
      width: 100%;
+     display: flex;
     justify-content: center;
     padding: 20px;;
+    
+    
 }
 
 div.pastor{
@@ -264,6 +267,7 @@ div.pastor{
     align-items: center;
     padding: 30px;
     max-width: 1200px;
+    
 }
 
 div.pastor img{
@@ -290,7 +294,8 @@ div#texto-pastor{
     background-color: rgba(255, 255, 255, 0.873);
     backdrop-filter: blur(2px);           /* Desfoque do fundo */
     -webkit-backdrop-filter: blur(10px);   /* Safari */
-    width: 120%;
+    width: 100%;
+    max-width: 450px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.155);
 
     position: relative;
