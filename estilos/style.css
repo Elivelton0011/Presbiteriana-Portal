@@ -7,9 +7,6 @@
      box-sizing: border-box;
 }
 
-    *{
-    outline: 1px solid rgb(60, 255, 0);
-}
 :root {
     --destaque: #54b7b5;
     --footer: #404040d9;
@@ -26,13 +23,13 @@ header{
     position: fixed;
     z-index: 5;
     display: flex;
-    width: 100%;
+    width: 100vw;
 }
 
 div.flex{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
 }
 
