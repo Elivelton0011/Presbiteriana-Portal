@@ -6,6 +6,9 @@
      font-family: "Nunito Sans", sans-serif;
 }
 
+    *{
+    outline: 1px solid red;
+}
 :root {
     --destaque: #54b7b5;
     --footer: #404040d9;
@@ -28,7 +31,7 @@ header{
 div.flex{
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
 }
 
