@@ -1,6 +1,5 @@
 /* celulares */
-
-@media (max-width: 767px){
+@media (max-width: 900px), (orientation: landscape) and (max-width: 900px){
 
     header{
         display: none;
@@ -31,6 +30,13 @@
 section#equipe{
      text-align: center;
 }
+
+ #container-pastor{
+        width: 100%;
+        justify-content: center;
+        padding: 20px;
+    }
+
 div.pastor img{
     height: 40vh;
     min-height: 100px;
