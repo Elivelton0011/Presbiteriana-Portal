@@ -8,7 +8,7 @@
 
 :root {
     --destaque: #54b7b5;
-    --footer: #4A4A4AD9;
+    --footer: #404040d9;
     --contradestaque: #103c3c;
 }
 
@@ -18,32 +18,18 @@ body {
 }
 
 /* cabecalho */
-div#contatos-nav{
-    display: flex;
-    background-color: var(--destaque);
-    gap: 20px;
-    justify-content:center ;
-    align-items: center;
-    height: 30px;
-
-    position: relative;
-    z-index: 1;
-    
-}
-div#contatos-nav > a{
-    color: white;
-    text-decoration: none;
-
-    
-}
 header{
-    position: relative;
-    z-index: 3;
+    position: fixed;
+    z-index: 5;
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-right: 150px;
+    width: 100%;
+}
+
+div.flex{
+    display: flex;
     align-items: center;
+    width: 100vw;
+    justify-content: space-between;
 }
 
 img#shape{
@@ -57,6 +43,9 @@ img#shape{
 
 img#logo{
     height: 108px;
+    position: relative;
+    z-index: 999;
+    top: 12px;
 }
 
 
@@ -65,6 +54,7 @@ nav>ul{
     display: flex;
     gap: 50px;
     list-style: none;
+    padding-right: 60px;
 }
 
 nav>ul>li>a{
@@ -79,14 +69,38 @@ nav>ul>li>a:hover{
     text-decoration: underline;
 }
 
+/* Menu scroll */
+
+img#logo-scroll{
+    display: none;
+}
+
+header.rolagem{
+    background-color: var(--contradestaque);
+    padding: 8px;
+}
+
+header.rolagem img#logo{
+    display: none;
+}
+
+header.rolagem img#logo-scroll{
+    display: block;
+    height: 50px;
+}
+
+
+header.rolagem img#shape{
+    display: none;
+
+}
+
 /* hero */
 section#hero{
     position: relative;
     
     width: 100%;
-     height: clamp(620px, 80vh, 850px);
-
-    margin-top: -128px;
+    height: clamp(620px, 80vh, 850px);
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
     overflow: hidden;
@@ -389,6 +403,9 @@ div#redes-sociais-icons{
     width: 100%;
     margin-bottom: -90px;
 }
+div#redes-sociais-icons > a{
+    color: var(--destaque);
+}
 
 hr#hr-redes-sociais{
     border: none;
@@ -455,14 +472,14 @@ footer >p>a{
 .hidden{
     opacity: 0;
     filter: blur(10px);
-    transition: opacity 1s ease-out, filter 0.6s ease-out;
+    transition: opacity 2s ease-out, filter 0.6s ease-out;
   
 }
 
 .show{
     opacity: 1;
     filter: blur(0);
-    transition: opacity 1s ease-out, filter 0.6s ease-out; 
+    transition: opacity 2s ease-out, filter 0.6s ease-out; 
 }
 
 section#horario.hidden img{
@@ -470,19 +487,19 @@ section#horario.hidden img{
 }
 section#horario.show img{
     transform: translatex(0%);
-    transition: transform 1s ease-out;
+    transition: transform 2s ease-out;
 }
 
 #container-horario :nth-child(1).hidden{
-    transition-delay: 200ms;
+    transition-delay: 300ms;
     
 }
 
 #container-horario :nth-child(2).show{
-    transition-delay: 300ms;
+    transition-delay: 400ms;
 }
 
 #container-horario :nth-child(3).hidden{
-    transition-delay: 400ms;
+    transition-delay: 500ms;
 }
 

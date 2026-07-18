@@ -7,34 +7,29 @@
     <title>Presbiteriana - vila feliz</title>
     <link rel="stylesheet" href="estilos/style.css">
     <script src="https://kit.fontawesome.com/6e9c8775be.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
-
-    <img id="shape" src="img/shape.png" alt="">
-    <div id="contatos-nav">
-        <a href="#">
-            <p>Localizacao |</p>
-        </a>
-        <a href="#">
-            <p>email |</p>
-        </a>
-        <a href="#">
-            <p>Contato </p>
-        </a>
-    </div>
-    <header>
-        <img id="logo" src="img/logo.png" alt="Igreja Presbiteriana">
-        <nav>
-            <ul>
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#horario">HORARIOS</a></li>
-                <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="#equipe">EQUIPE</a></li>
-                <li><a href="#redes">REDES</a></li>
-                  <li><a href="#contatos">CONTATOS</a></li>
-            </ul>
-        </nav>
+    <header id="header">
+        <div class="container">
+            <img id="shape" src="img/shape.png" alt="">
+ 
+            <div class="flex">
+                <img id="logo" src="img/logo.png" alt="Igreja Presbiteriana">
+                <img id="logo-scroll" src="img/logo_solo.png">
+                <nav>
+                    <ul>
+                        <li><a href="#hero">HOME</a></li>
+                        <li><a href="#horario">HORARIOS</a></li>
+                        <li><a href="#sobre">SOBRE</a></li>
+                        <li><a href="#equipe">EQUIPE</a></li>
+                        <li><a href="#redes">REDES</a></li>
+                          <li><a href="#contatos">CONTATOS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
 
@@ -100,7 +95,7 @@
         <h1>CONHEÇA NOSSA LIDERANÇA</h1>
         <div id="container-pastor">
             <div class="pastor">
-                <img class="equipe-img" src="img/equipe/pastor.avif">
+                <img class="equipe-img" src="img/equipe/image.png">
                 <div id="texto-pastor">
                     <h2>REVERENDO CARLOS RODRIGO <br> ROCHA</h2>
                     <h3>PASTOR</h3>
@@ -197,10 +192,10 @@
             
            <div id="redes-sociais-icons">
              <hr id="hr-redes-sociais">
-               <i class="fa-brands fa-instagram"></i>
-               <i class="fa-brands fa-whatsapp"></i>
-               <i class="fa-brands fa-facebook"></i>
-               <i class="fa-brands fa-youtube"></i> <hr id="hr-redes-sociais">
+               <a href="https://www.instagram.com/ipvilafeliz/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+               <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+               <a href=""><i class="fa-brands fa-facebook"></i></a>
+               <a href="https://www.youtube.com/@ipbvilafelizvila" target="_blank"><i class="fa-brands fa-youtube"></i></a> <hr id="hr-redes-sociais">
            </div>
         </div>
     </section>
@@ -211,7 +206,7 @@
         <h1>CONTATOS</h1>
         <div id="container-contatos">
             <div>
-                <img src="img/contatos/igreja.jpg" class="objeto-contato">
+                <img src="img/contatos/fachada.png" class="objeto-contato">
                 <h2>Endereço</h2>
                 <p>Rua: 01, Vila Feliz, São Paulo - SP</p>
             </div>
@@ -232,6 +227,7 @@
     </footer>
 
     <script src="scripts/hero.js"></script>
+    <script src="scripts/menu.js"></script>
 </body>
 <script src="scripts/scroll.js"></script>
 

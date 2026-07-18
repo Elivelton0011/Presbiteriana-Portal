@@ -39,4 +39,4 @@ prev.onclick = () => {
 // troca automaticamente a cada 5 segundos
 setInterval(() => {
     nextSlide()
-}, 100000)
+}, 2000)
