@@ -260,6 +260,13 @@ div#texto-sobre{
     gap: 18px;
 }
 
+#texto-sobre{
+     line-height: 1.7;
+    text-align: justify;
+    color: #333;
+    max-width: 60ch;
+}
+
 #botao-saiba-mais{
     text-decoration: none;
     display: inline-block;
@@ -276,6 +283,7 @@ div#texto-sobre{
     background-color: var(--contradestaque);
     transform: translateY(-3px);
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+    color: white;
 }
 
 /* Equipe */
@@ -440,6 +448,12 @@ div#redes-sociais{
     flex-direction: column;
     gap: 20px;
     max-width: 450px;
+}
+
+#texto-youtube p{
+    text-align: justify;
+    line-height: 1.5;
+    color: #333;
 }
 
 div#redes-sociais-icons{

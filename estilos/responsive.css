@@ -34,7 +34,6 @@
     gap: 0;
     pointer-events: none;
     padding-right: 0;
-        
     }
 
     nav>ul>li>a{
@@ -82,6 +81,13 @@
     flex-direction: column;
     text-align: center;
     gap: 18px;
+}
+
+p#paragrafo-sobre{
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+    
 }
 
 section#equipe{
