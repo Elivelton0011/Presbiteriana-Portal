@@ -1,7 +1,15 @@
 /* celulares */
 
 @media (max-width: 900px), (orientation: landscape) and (max-width: 900px){
-
+    section#horario{
+        scroll-margin-top: 20px;
+    }
+      section#sobre{
+        scroll-margin-top: 40px;
+    }
+      section#contatos{
+        scroll-margin-top: 20px;
+    }
     .hamburger{
         display: block;
         position: fixed;
@@ -92,6 +100,7 @@ p#paragrafo-sobre{
 
 section#equipe{
      text-align: center;
+     scroll-margin-top: 50px;
 }
 div.pastor img{
     height: 40vh;
@@ -123,6 +132,7 @@ div#container-lideranca{
 }
 
 section#redes{
+    scroll-margin-top: 40px;
     text-align: center;
 }
 

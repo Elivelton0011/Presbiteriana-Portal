@@ -1,7 +1,10 @@
 const header = document.querySelector('#header');
+const mobile = window.matchMedia('(max-width: 900px)');
 
-window.addEventListener('scroll', () => {
-    if (window.innerWidth <= 1024) return;
+function atualizaHeader() {
+    header.classList.toggle('rolagem', !mobile.matches && window.scrollY > 0);
+}
 
-    header.classList.toggle('rolagem', window.scrollY > 0);
-});
+window.addEventListener('scroll', atualizaHeader, { passive: true });
+mobile.addEventListener('change', atualizaHeader);
+atualizaHeader();

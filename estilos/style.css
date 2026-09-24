@@ -272,6 +272,7 @@ h1 {
 
 /* Seção: título em cima, cards embaixo, tudo centralizado */
 section#horario {
+    scroll-margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,10 +300,11 @@ div#container-horario {
     border-radius: 15px;
     overflow: hidden;
     perspective: 1000px;
+    isolation: isolate;                                        /* corrige o vazamento no Safari/iOS */
+    -webkit-mask-image: -webkit-radial-gradient(white, black); /* reforço para o Safari */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
-    outline: none;   /* remove a borda azul padrão do foco */
 }
 
 /* Imagem do horário (define o tamanho do card).
@@ -312,6 +314,7 @@ img.horario-img {
     height: clamp(300px, 40vh, 450px);
     width: auto;
     object-fit: cover;
+    border-radius: inherit;   /* herda o arredondamento do card */
 }
 
 /* Hover (mouse) ou focus (toque no celular): card cresce um pouco */
@@ -321,9 +324,14 @@ img.horario-img {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Conteúdo (título + descrição) que fica por cima da imagem.
-   Começa "deitado" (rotateX -90°), girando a partir da borda de baixo,
-   então fica invisível até o hover. */
+/* Indicador de foco só para quem navega pelo teclado */
+.card-horario:focus-visible {
+    outline: 3px solid var(--destaque);
+    outline-offset: 4px;
+}
+
+/* Conteúdo que fica por cima da imagem.
+   Começa deitado (rotateX -90°) e invisível. */
 .card__content {
     position: absolute;
     top: 0;
@@ -332,15 +340,19 @@ img.horario-img {
     height: 100%;
     padding: 20px;
     background-color: #f2f2f2;
+    border-radius: inherit;
     transform: rotateX(-90deg);
     transform-origin: bottom;
+    opacity: 0;
+    backface-visibility: hidden;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* No hover/foco o conteúdo gira até ficar de frente e cobre a imagem */
+/* No hover/foco o conteúdo gira até ficar de frente e aparece */
 .card-horario:hover .card__content,
 .card-horario:focus .card__content {
     transform: rotateX(0deg);
+    opacity: 1;   /* <- essa linha estava faltando */
 }
 
 /* Título do card */
@@ -372,6 +384,7 @@ hr {
 }
 
 section#sobre {
+    scroll-margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -439,6 +452,7 @@ div#texto-sobre {
    ========================================================================== */
 
 section#equipe {
+    scroll-margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -568,6 +582,7 @@ div#container-lideranca {
    ========================================================================== */
 
 section#redes {
+    scroll-margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -647,6 +662,7 @@ hr.hr-redes-sociais {
    ========================================================================== */
 
 section#contatos {
+    scroll-margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
