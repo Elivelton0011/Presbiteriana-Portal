@@ -1,104 +1,161 @@
+/* ==========================================================================
+   IGREJA PRESBITERIANA EM VILA FELIZ - style.css
+
+   ÍNDICE
+   1.  Fonte e reset
+   2.  Variáveis de cor
+   3.  Cabeçalho
+   4.  Navegação
+   5.  Menu ao rolar a página
+   6.  Menu hambúrguer (mobile)
+   7.  Hero (carrossel)
+   8.  Horário de culto (com cards animados)
+   9.  Sobre a igreja
+   10. Equipe
+   11. Redes
+   12. Contatos
+   13. Rodapé
+   14. Animação de scroll
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. FONTE E RESET
+   ========================================================================== */
+
+/* Importa a fonte Nunito Sans do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-*{
-    margin: 0%;
-    padding: 0%;
-     font-family: "Nunito Sans", sans-serif;
-     box-sizing: border-box;
+/* Reset: zera margens e paddings padrão do navegador, aplica a fonte em tudo
+   e faz o width/height incluírem padding e borda (box-sizing) */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
 }
 
+
+/* ==========================================================================
+   2. VARIÁVEIS DE COR
+   Mude aqui e a cor muda no site inteiro
+   ========================================================================== */
 :root {
-    --destaque: #54b7b5;
-    --footer: #404040d9;
-    --contradestaque: #103c3c;
+    --destaque: #71a9db;        /* azul claro: botões, linhas, ícones */
+    --footer: #404040d9;        /* cinza translúcido do rodapé */
+    --contradestaque: #022c52;  /* azul escuro: títulos, menu ao rolar */
 }
 
 body {
     height: 100vh;
-   
 }
 
-/* cabecalho */
-header{
+
+/* ==========================================================================
+   3. CABEÇALHO
+   ========================================================================== */
+
+/* Cabeçalho fixo no topo, acima de todo o resto */
+header {
     position: fixed;
     z-index: 5;
     display: flex;
     width: 100vw;
 }
 
-div.flex{
+/* Linha com logo (esquerda) e menu (direita) */
+div.flex {
     display: flex;
     align-items: center;
     width: 100vw;
     justify-content: space-between;
 }
 
-img#shape{
-    height: 520px;
+/* Forma decorativa azul atrás da logo */
+img#shape {
+    height: 420px;
     position: absolute;
     z-index: 1;
     top: -40px;
     left: 0;
-
 }
 
-img#logo{
-    height: 108px;
+/* Logo grande (topo da página) */
+img#logo {
+    height: 118px;
     position: relative;
     z-index: 999;
     top: 12px;
+    left: 50px;
 }
 
 
-/* Navegacao */
-nav>ul{
+/* ==========================================================================
+   4. NAVEGAÇÃO
+   ========================================================================== */
+
+/* Lista de links em linha */
+nav > ul {
     display: flex;
     gap: 50px;
     list-style: none;
     padding-right: 60px;
 }
 
-nav>ul>li>a{
+/* Aparência dos links do menu */
+nav > ul > li > a {
     text-decoration: none;
     font-weight: bolder;
     font-size: 14px;
     color: white;
 }
 
-nav>ul>li>a:hover{
+/* Ao passar o mouse: muda de cor e sublinha */
+nav > ul > li > a:hover {
     color: var(--destaque);
     text-decoration: underline;
 }
 
-/* Menu scroll */
 
-img#logo-scroll{
+/* ==========================================================================
+   5. MENU AO ROLAR A PÁGINA
+   O JavaScript (menu.js) adiciona a classe "rolagem" no header
+   ========================================================================== */
+
+/* A logo pequena fica escondida até o usuário rolar */
+img#logo-scroll {
     display: none;
 }
 
-header.rolagem{
+/* Header ganha fundo azul escuro */
+header.rolagem {
     background-color: var(--contradestaque);
     padding: 8px;
 }
 
-header.rolagem img#logo{
+/* Esconde a logo grande ao rolar */
+header.rolagem img#logo {
     display: none;
 }
 
-header.rolagem img#logo-scroll{
+/* Mostra a logo pequena ao rolar */
+header.rolagem img#logo-scroll {
     display: block;
     height: 50px;
 }
 
-
-header.rolagem img#shape{
+/* Esconde a forma decorativa ao rolar */
+header.rolagem img#shape {
     display: none;
-
 }
 
-/* Menu - Hamburguer */
-/* Menu - Hamburguer */
-.hamburger{
+
+/* ==========================================================================
+   6. MENU HAMBÚRGUER (aparece só no mobile, controlado pelo responsive.css)
+   ========================================================================== */
+
+/* Botão: escondido no desktop */
+.hamburger {
     display: none;
     border: none;
     background: none;
@@ -110,7 +167,8 @@ header.rolagem img#shape{
     padding: 0;
 }
 
-.hamburger .bar{
+/* As 3 barrinhas do ícone */
+.hamburger .bar {
     display: block;
     width: 100%;
     height: 3px;
@@ -119,56 +177,66 @@ header.rolagem img#shape{
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
-.hamburger.active .bar{
+/* Menu aberto: barras ficam brancas */
+.hamburger.active .bar {
     background: white;
 }
 
-.hamburger.active .bar:nth-child(1){
+/* Menu aberto: barra de cima gira 45° (forma o "X") */
+.hamburger.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
 
-.hamburger.active .bar:nth-child(2){
+/* Menu aberto: barra do meio some */
+.hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active .bar:nth-child(3){
+/* Menu aberto: barra de baixo gira -45° (completa o "X") */
+.hamburger.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* hero */
-section#hero{
+
+/* ==========================================================================
+   7. HERO (carrossel de imagens do topo)
+   ========================================================================== */
+
+/* Área do carrossel, com cantos arredondados embaixo */
+section#hero {
     position: relative;
-    
     width: 100%;
     height: clamp(620px, 80vh, 850px);
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
     overflow: hidden;
-
 }
-div.item{
+
+/* Cada slide fica escondido por padrão */
+div.item {
     position: absolute;
     display: none;
     width: 100%;
     height: 100%;
 }
 
-div.item.active{
-    display:block ;
+/* Só o slide com a classe "active" aparece (hero.js troca essa classe) */
+div.item.active {
+    display: block;
 }
 
-.item img{
+/* Imagem preenche o slide sem distorcer */
+.item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-
-#prev, #next{
-     position: absolute;
+/* Botões de anterior (<) e próximo (>) */
+#prev, #next {
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);   /* centraliza na vertical */
     height: 47px;
     width: 47px;
     border-radius: 50px;
@@ -180,25 +248,30 @@ div.item.active{
     cursor: pointer;
     z-index: 4;
 }
+
 #prev {
     left: 30px;
 }
 
-#next{
+#next {
     right: 30px;
 }
 
-/* Horario de culto */
 
-h1{
+/* ==========================================================================
+   8. HORÁRIO DE CULTO (com cards animados)
+   ========================================================================== */
+
+/* Título padrão das seções (usado em todos os <h1>) */
+h1 {
     font-size: 2.5rem;
     color: var(--contradestaque);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-     Font-weight: 800;
-    
+    font-weight: 800;
 }
 
-section#horario{
+/* Seção: título em cima, cards embaixo, tudo centralizado */
+section#horario {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,66 +281,139 @@ section#horario{
     z-index: 0;
 }
 
-div#container-horario{
+/* Linha que guarda os cards.
+   flex-wrap: se não couber na tela, os cards quebram para a linha de baixo */
+div#container-horario {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
-img.horario-img{
+/* --- CARD ---------------------------------------------------------------
+   O card não tem largura/altura fixas: ele assume o tamanho da imagem.
+   overflow: hidden corta o conteúdo que gira quando ele está "fora" do card.
+   perspective dá o efeito 3D da rotação. */
+.card-horario {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    outline: none;   /* remove a borda azul padrão do foco */
+}
+
+/* Imagem do horário (define o tamanho do card).
+   display: block evita um espacinho em branco embaixo da imagem. */
+img.horario-img {
+    display: block;
     height: clamp(300px, 40vh, 450px);
     width: auto;
-    border-radius: 15px;
     object-fit: cover;
 }
 
-/* Sobre a igreja */
+/* Hover (mouse) ou focus (toque no celular): card cresce um pouco */
+.card-horario:hover,
+.card-horario:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
-hr{
+/* Conteúdo (título + descrição) que fica por cima da imagem.
+   Começa "deitado" (rotateX -90°), girando a partir da borda de baixo,
+   então fica invisível até o hover. */
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* No hover/foco o conteúdo gira até ficar de frente e cobre a imagem */
+.card-horario:hover .card__content,
+.card-horario:focus .card__content {
+    transform: rotateX(0deg);
+}
+
+/* Título do card */
+.card__title {
+    font-size: 24px;
+    color: var(--contradestaque);
+    font-weight: 700;
+}
+
+/* Texto de descrição do card */
+.card__description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================================
+   9. SOBRE A IGREJA
+   ========================================================================== */
+
+/* Linha azul que separa as seções */
+hr {
     border: none;
     height: 8px;
     background-color: var(--destaque);
     margin: 100px 0;
 }
 
-section#sobre{
+section#sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
 }
 
-div#conteudo-sobre{
+/* Imagem à esquerda, texto à direita */
+div#conteudo-sobre {
     display: flex;
     gap: 30px;
     padding: 30px;
     max-width: 1200px;
-     width: 100%;
-     align-items: center;
+    width: 100%;
+    align-items: center;
 }
 
-img#img-conteudo-sobre{
-     width: clamp(280px, 35vw, 450px);
+/* Imagem quadrada com tamanho flexível */
+img#img-conteudo-sobre {
+    width: clamp(280px, 35vw, 450px);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 15px;
-    flex-shrink: 0;
-    
+    flex-shrink: 0;   /* impede a imagem de encolher */
 }
 
-div#texto-sobre{
+/* Organiza título, subtítulo, parágrafo e botão em coluna */
+div#texto-sobre {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-#texto-sobre{
-     line-height: 1.7;
+/* Aparência do texto (largura limitada melhora a leitura) */
+#texto-sobre {
+    line-height: 1.7;
     text-align: justify;
     color: #333;
     max-width: 60ch;
 }
 
-#botao-saiba-mais{
+/* Botão azul (usado em "Saiba mais" e "Acessar Canal") */
+#botao-saiba-mais {
     text-decoration: none;
     display: inline-block;
     color: white;
@@ -276,92 +422,98 @@ div#texto-sobre{
     border-radius: 5px;
     font-weight: bolder;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#botao-saiba-mais:hover{
+/* Hover do botão: escurece e sobe um pouquinho */
+#botao-saiba-mais:hover {
     background-color: var(--contradestaque);
     transform: translateY(-3px);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
     color: white;
 }
 
-/* Equipe */
 
-section#equipe{
+/* ==========================================================================
+   10. EQUIPE
+   ========================================================================== */
+
+section#equipe {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
 }
 
-div#container-pastor{   
-     width: 100%;
-     display: flex;
+/* Área do pastor, centralizada */
+div#container-pastor {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    padding: 20px;;
-    
-    
+    padding: 20px;
 }
 
-div.pastor{
+/* Foto em cima, caixa de texto embaixo */
+div.pastor {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     padding: 30px;
     max-width: 1200px;
-    
 }
 
-div.pastor img{
+/* Foto do pastor: quadrada, com tamanho mínimo e máximo */
+div.pastor img {
     height: 40vh;
     min-height: 400px;
     max-height: 450px;
     width: 40vh;
     min-width: 400px;
     max-width: 450px;
-    aspect-ratio: 1/1;
-    Object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50px;
-
     position: relative;
     z-index: 1;
 }
 
-div#texto-pastor{
+/* Caixa de texto que sobrepõe a parte de baixo da foto (margin-top negativo).
+   Fundo branco quase opaco com leve desfoque. */
+div#texto-pastor {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.873);
-    backdrop-filter: blur(2px);           /* Desfoque do fundo */
-    -webkit-backdrop-filter: blur(10px);   /* Safari */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);   /* versão para Safari */
     width: 100%;
     max-width: 450px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.155);
-
     position: relative;
     z-index: 2;
     margin-top: -60px;
 }
 
-div#texto-pastor h2{
+/* Nome do pastor */
+div#texto-pastor h2 {
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    Font-weight: 700;
-    
+    font-weight: 700;
 }
 
-div#texto-pastor h3{
+/* Cargo ("PASTOR") */
+div#texto-pastor h3 {
     font-size: 1.2rem;
     color: gray;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    Font-weight: 300;
+    font-weight: 300;
 }
 
-#botao-ler-mais{
+/* Botão "Ler mais" */
+#botao-ler-mais {
     text-decoration: none;
     display: inline-block;
     color: white;
@@ -371,16 +523,17 @@ div#texto-pastor h3{
     border-radius: 5px;
     font-weight: bolder;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#botao-ler-mais:hover{
+#botao-ler-mais:hover {
     background-color: var(--contradestaque);
     transform: translateY(-3px);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-div#lideranca{
+/* Bloco "Nossa equipe" */
+div#lideranca {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,36 +541,43 @@ div#lideranca{
     padding: 30px;
 }
 
-div#container-lideranca{
+/* Colunas: Diaconia, Ecos e Louvor lado a lado */
+div#container-lideranca {
     display: flex;
     gap: 100px;
     padding: 30px;
 }
 
-.area-lideranca{
+/* Cada área (título + lista de nomes) */
+.area-lideranca {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    
 }
 
-.area-lideranca ul{
+/* A lista de nomes é dividida em 2 colunas */
+.area-lideranca ul {
     list-style: none;
     columns: 2;
-   
 }
 
-/* redes */
-section#redes{
+
+/* ==========================================================================
+   11. REDES
+   ========================================================================== */
+
+section#redes {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     padding: 30px;
 }
-div#youtube{
-      display: flex;
+
+/* Vídeo à esquerda, texto à direita */
+div#youtube {
+    display: flex;
     align-items: center;
     gap: 40px;
     padding: 30px;
@@ -425,16 +585,17 @@ div#youtube{
     width: 100%;
 }
 
-iframe#youtube-video{
-  width: clamp(300px, 55vw, 800px);
+/* Vídeo do YouTube com proporção 16:9 */
+iframe#youtube-video {
+    width: clamp(300px, 55vw, 800px);
     aspect-ratio: 16 / 9;
     height: auto;
-
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
 }
 
-div#redes-sociais{
+/* Bloco "Redes sociais" */
+div#redes-sociais {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,20 +604,22 @@ div#redes-sociais{
     width: 100%;
 }
 
-#texto-youtube{
+/* Texto ao lado do vídeo */
+#texto-youtube {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 450px;
 }
 
-#texto-youtube p{
+#texto-youtube p {
     text-align: justify;
     line-height: 1.5;
     color: #333;
 }
 
-div#redes-sociais-icons{
+/* Linha de ícones (Instagram, WhatsApp, Facebook, YouTube) */
+div#redes-sociais-icons {
     display: flex;
     gap: 30px;
     font-size: 3rem;
@@ -464,11 +627,13 @@ div#redes-sociais-icons{
     width: 100%;
     margin-bottom: -90px;
 }
-div#redes-sociais-icons > a{
+
+div#redes-sociais-icons > a {
     color: var(--destaque);
 }
 
-hr.hr-redes-sociais{
+/* Linhas decorativas nas laterais dos ícones */
+hr.hr-redes-sociais {
     border: none;
     height: 4px;
     background-color: var(--destaque);
@@ -476,18 +641,22 @@ hr.hr-redes-sociais{
     margin-top: 20px;
 }
 
-/* contatos */
 
-section#contatos{
-     display: flex;
+/* ==========================================================================
+   12. CONTATOS
+   ========================================================================== */
+
+section#contatos {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     padding: 30px;
 }
 
-div#container-contatos{
-        display: flex;
+/* Fachada e mapa lado a lado */
+div#container-contatos {
+    display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 40px;
@@ -496,22 +665,28 @@ div#container-contatos{
     max-width: 1300px;
 }
 
-.objeto-contato{
- width: clamp(300px, 40vw, 500px);
+/* Estilo comum da foto da fachada e do mapa (quadrados com cantos arredondados) */
+.objeto-contato {
+    width: clamp(300px, 40vw, 500px);
     aspect-ratio: 1 / 1;
     height: auto;
-
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
     margin-bottom: 15px;
 }
 
-/* footer */
-footer img{
+
+/* ==========================================================================
+   13. RODAPÉ
+   ========================================================================== */
+
+/* Logo branca do rodapé */
+footer img {
     width: 6rem;
 }
-footer{
+
+footer {
     background-color: var(--footer);
     color: white;
     width: 100%;
@@ -521,48 +696,58 @@ footer{
     justify-content: center;
     text-align: center;
     gap: 5px;
-    padding: 20px 0;  
+    padding: 20px 0;
 }
 
-footer >p>a{
+/* Link do desenvolvedor */
+footer > p > a {
     color: var(--destaque);
     font-weight: bold;
     text-decoration: none;
 }
 
 
-/* animacao de scroll */
-.hidden{
+/* ==========================================================================
+   14. ANIMAÇÃO DE SCROLL
+   O JavaScript (scroll.js) troca "hidden" por "show" quando o elemento
+   aparece na tela
+   ========================================================================== */
+
+/* Estado inicial: invisível e desfocado */
+.hidden {
     opacity: 0;
     filter: blur(10px);
     transition: opacity 2s ease-out, filter 0.6s ease-out;
-  
 }
 
-.show{
+/* Estado final: visível e nítido */
+.show {
     opacity: 1;
     filter: blur(0);
-    transition: opacity 2s ease-out, filter 0.6s ease-out; 
+    transition: opacity 2s ease-out, filter 0.6s ease-out;
 }
 
-section#horario.hidden img{
-    transform: translatex(-100%);
+/* Horários: as imagens começam deslocadas para a esquerda...
+   (o overflow: hidden do card corta a parte que sai) */
+section#horario.hidden img {
+    transform: translateX(-100%);
 }
-section#horario.show img{
-    transform: translatex(0%);
+
+/* ...e deslizam para a posição normal ao aparecer */
+section#horario.show img {
+    transform: translateX(0%);
     transition: transform 2s ease-out;
 }
 
-#container-horario :nth-child(1).hidden{
+/* Cascata: cada card aparece um pouco depois do anterior */
+#container-horario :nth-child(1).show {
     transition-delay: 300ms;
-    
 }
 
-#container-horario :nth-child(2).show{
+#container-horario :nth-child(2).show {
     transition-delay: 400ms;
 }
 
-#container-horario :nth-child(3).hidden{
+#container-horario :nth-child(3).show {
     transition-delay: 500ms;
 }
-
